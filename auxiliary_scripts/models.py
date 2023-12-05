@@ -9,9 +9,6 @@ import torch
 from .backbones import get_resnet_backbone, get_attention_backbone
 from .loader_utils import get_loader, ManualData
 
-# pup samples are labeled as class '2' by default, this flag maps them to flag 1 for binary classification.
-PUP_LABEL_1 = True
-
 
 class Classifier(nn.Module):
     def __init__(self, backbone, num_out=2, dtype=torch.float):

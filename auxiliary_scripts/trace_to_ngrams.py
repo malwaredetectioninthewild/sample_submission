@@ -9,7 +9,6 @@ FIELD_ORDER = {'regs_created':0, 'regs_deleted':1, 'mutexes_created':2, 'process
 ORDER_FIELD = {0:'regs_created', 1:'regs_deleted', 2:'mutexes_created', 3:'processes_created', 4:'files_created', 5:'processes_injected'}
 
 
-# assign unique indices to the kept tokens - also assign indices to enumerated rare tokens
 def get_tok_str(tok_type, tok):
     return f'{tok_type}::{tok}'
 
@@ -140,6 +139,7 @@ def sequences_to_ngrams(sequences, n=2):
 
     return np.asarray(all_ngram_seq, dtype=object)
 
+# we apply the hashing trick on each n-gram to map them to a fixed sized feature vector
 def get_token_md5(cur_str, n_buckets, start_idx=0):
 
     md5 = int(hashlib.md5(cur_str.encode('utf-8')).hexdigest(), 16)
