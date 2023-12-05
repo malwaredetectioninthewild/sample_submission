@@ -2,7 +2,7 @@ This is the sample submission format for the **Malware Detection In the Wild** L
 
 You are expected to provide three files as part of your submission (you can also submit auxiliary files and scripts needed for your submission):
 
-* ***setup_environment.sh** A bash script to create a Conda environment and download the requires packages for your submission (e.g., Pytorch). This repository includes an example for this script.
+* **setup_environment.sh** A bash script to create a Conda environment and download the requires packages for your submission (e.g., Pytorch). This repository includes an example for this script.
 
 * **process_features.py**: Reads the reports that contain traces in the dataset_path (please see https://github.com/malwaredetectioninthewild/explore_data notebook to learn about the standardized report format and how to read it) and converts them to a feature matrix expected by your model. This repository includes an example for this script. An example command that will be used on your submission is:
 
